@@ -1,0 +1,34 @@
+.main-image {
+    display:none;
+    justify-content: center;
+    border: 1px solid red;
+
+    .notebook-image{
+        width: 100%;
+    }
+}
+
+
+.cta {
+    .flex-layout(column, space-between, center);
+    
+
+
+    .title-button {
+        .flex-layout(column, center, center);
+        background-color: @lightningblue;
+        color: @lightningpurple;
+
+        button {
+            .button-layout;
+        }
+        button:hover {
+            .button-layout-hover;
+        }
+    }
+}
+
+
+
+
+
