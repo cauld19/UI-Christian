@@ -2,7 +2,7 @@
     .about-team {
         display: flex;
         width: 100%;
-        padding: 4% 2%;
+        padding: 2% 2%;
         height: 100vh;
     
         .box {
@@ -10,8 +10,12 @@
             overflow: hidden;
             transition: .5s;
             margin: 0 2%;
-            box-shadow: 0 20px 30px rgba(0,0,0,.1);
+            box-shadow: 0 20px 30px rgba(0,0,0,.3);
             line-height: 0;
+
+            a {
+                text-decoration: none;
+            }
             
     
             img {
@@ -23,12 +27,22 @@
             }
     
             span {
-                font-size: 4vh;
+                font-size: 3.5vh;
                 color: @lightningblue;
                 display: block;
                 text-align: center;
                 height: 10vh;
                 line-height: 2.6;
+            }
+
+            span::after {
+                content:" " url('../img/GitHub-Mark-32px.png');
+            }
+
+            span:hover {
+                background-color: @lightningblue;
+                color: #ffff;
+                transition: 1s;
             }
         }
     
@@ -39,5 +53,15 @@
                 opacity: 1;
             }
             
+    }
+
+    .about-title {
+        .flex-layout(column, center, center);
+
+        h1 {
+            color: @lightningpurple;
+            border-bottom: 1px solid @lightningblue;
+        }
+
     }
 

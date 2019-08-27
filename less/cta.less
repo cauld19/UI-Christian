@@ -1,32 +1,95 @@
-.main-image {
-    display:none;
-    justify-content: center;
-    border: 1px solid red;
+.cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
 
-    .notebook-image{
+    img {
         width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
     }
 }
 
+.cta-wrapper1 {
+    display: grid;
+    border: 1px solid red;
+    grid-column: 1/3;
+}
 
-.cta {
-    .flex-layout(column, space-between, center);
+// .cta {
+//     .flex-layout(row, space-between, center);
+//     background: @lightningpurple;
+    
+//     .main-image {
+//         display:flex;
+//         justify-content: center;
+//         flex-basis: 70%;
+//         padding: 2rem;
+//         padding-right: 0;
+        
+        
+    
+//         .notebook-image{
+//             width: 100%;
+//         }
+//     }
     
 
+// .cta {
+//     position: relative;
+//     background: url(../img/cta-image.jpg) no-repeat bottom center/cover;
+//     height: 500px;
 
-    .title-button {
-        .flex-layout(column, center, center);
-        background-color: @lightningblue;
-        color: @lightningpurple;
+//     .overlay {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         height: 100%;
+//         width: 100%;
+//         background-color: rgba(0, 0, 0, 0.4);
 
-        button {
-            .button-layout;
-        }
-        button:hover {
-            .button-layout-hover;
-        }
-    }
-}
+//         .cta-inner {
+//             color: #fff;
+//              .flex-layout(column, none,none);
+//              margin-top: 3rem;
+//              margin-left: 3rem;
+//              max-width: 800px;
+
+//             h1 {
+//                 border-bottom: 1px solid @lightningpurple;
+//                 font-family: 'Dancing Script', cursive;
+//                 width: 28rem;
+//                 color: @lightningblue;
+
+//             }
+
+//             h2 {
+//                 color: #ffff;
+//             }
+        
+//             .cta-button {
+//                 margin: 0 auto;
+//                 margin-top: 5rem;
+
+//                 button {
+//                     .button-layout;
+//                 }
+                
+        
+//             }
+            // button:hover {
+            //     .button-layout-hover;
+
+//         }
+//     }
+// }
+
+    
+
+   
+
 
 
 
