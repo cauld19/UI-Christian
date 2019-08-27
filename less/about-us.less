@@ -1,16 +1,25 @@
 
     .about-team {
         display: flex;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(175px,1fr));
+        // grid-gap: 1.5rem;
         width: 100%;
         padding: 2% 2%;
         height: 100vh;
+        
+        @media @tablet {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(185px,1fr));
+            grid-gap: 1.5rem;
+        }
     
         .box {
             flex: 1;
             overflow: hidden;
             transition: .5s;
             margin: 0 2%;
-            box-shadow: 0 20px 30px rgba(0,0,0,.3);
+            box-shadow: @bxs;
             line-height: 0;
 
             a {
@@ -22,8 +31,13 @@
                 width: 100%;
                 height: calc(100% - 10vh);
                 object-fit: cover; 
-                transition: .5s;
+                transition: .75s;
                 opacity: 0.8;
+
+                @media @tablet {
+                    height: calc(100% - 7vh);
+                }
+
             }
     
             span {
@@ -33,6 +47,16 @@
                 text-align: center;
                 height: 10vh;
                 line-height: 2.6;
+
+                @media @tablet {
+                    font-size: 2.5vh;
+                    color: @lightningblue;
+                    display: block;
+                    text-align: center;
+                    height: 7vh;
+                    line-height: 1.6;
+                    padding-top: 0.5vh;
+                }
             }
 
             span::after {
@@ -46,12 +70,12 @@
             }
         }
     
-        .box:hover { flex: 1 1 50%; }
+        .box:hover { flex: 1 1 55%; }
             img:hover {
                 width: 100%;
                 height: 100%;
                 opacity: 1;
-            }
+            }      
             
     }
 

@@ -1,22 +1,55 @@
-.cta {
+.top-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 1.5rem;
+    grid-gap: 2rem;
+    grid-template-areas: 
+        'cta cta cta'
+        'cta cta cta';
 
-    img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
+    .cta {
+        grid-area: cta;
+        min-height: 400px;
+        background: url(../img/cta-image.jpg);
+        background-size: cover;
+        background-position: center;
+        .flex-layout(column, start, start);
+        padding: 5rem;
+        box-shadow: @bxs;
+
+        h1 {
+            font-size: 7rem;
+        }
+
+        button {
+            .button-layout;
+        }
+
     }
 }
 
-.cta-wrapper1 {
-    display: grid;
-    border: 1px solid red;
-    grid-column: 1/3;
-}
+
+
+
+
+
+// .cta {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-template-rows: 1fr 1fr 1fr;
+//     grid-gap: 1.5rem;
+
+//     img {
+//         width: 100%;
+//         height: 100%;
+//         display: block;
+//         object-fit: cover;
+//     }
+// }
+
+// .cta-wrapper1 {
+//     display: grid;
+//     border: 1px solid red;
+//     grid-column: 1/3;
+// }
 
 // .cta {
 //     .flex-layout(row, space-between, center);
