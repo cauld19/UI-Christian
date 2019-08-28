@@ -1,91 +1,117 @@
+.container {
+    height: 100%;
+}
 
-    .about-team {
-        display: flex;
-        // display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(175px,1fr));
-        // grid-gap: 1.5rem;
-        width: 100%;
-        padding: 2% 2%;
-        height: 100vh;
+.about-title {
+    .flex-layout(column, center, center);
+
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        color: @lightningpurple;
+        border-bottom: 1px solid black;
+        margin-top: 1rem;
+    }
+
+    p {
+        color: @lightningblue;
+    }
+}
+
+
+
+.about-team {
+    display: flex;
+    width: 100%;
+    padding: 2% 2%;
+    height: 100vh;
         
-        @media @tablet {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(185px,1fr));
-            grid-gap: 1.5rem;
-        }
-    
-        .box {
-            flex: 1;
-            overflow: hidden;
-            transition: .5s;
-            margin: 0 2%;
-            box-shadow: @bxs;
-            line-height: 0;
+    @media @tablet {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(185px,1fr));
+        grid-gap: 1.5rem;
+    }
 
-            a {
-                text-decoration: none;
-            }
+    @media @phone {
+        grid-template-columns: 1fr;
+        padding: 0;
+        grid-gap: 0rem;
+        height: 100%;
+    }
+    
+    .box {
+        flex: 1;
+        overflow: hidden;
+        transition: .75s;
+        margin: 0 2%;
+        box-shadow: @bxs;
+        line-height: 0;
+
+        @media @phone {
+            height: 50vh;
+            margin: 0 0 1rem 0;
+            box-shadow: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
             
     
-            img {
-                width: 100%;
-                height: calc(100% - 10vh);
-                object-fit: cover; 
-                transition: .75s;
-                opacity: 0.8;
+        img {
+            width: 100%;
+            height: calc(100% - 10vh);
+            object-fit: cover; 
+            transition: .5s;
+            opacity: 0.8;
 
-                @media @tablet {
-                    height: calc(100% - 7vh);
-                }
-
+            @media @tablet {
+                height: calc(100% - 7vh);
             }
+
+            @media @phone {
+                height: calc(100% - 6vh);
+                object-fit: cover;
+            }
+        }
     
-            span {
-                font-size: 3.5vh;
+        span {
+            font-size: 3.5vh;
+            color: @lightningblue;
+            display: block;
+            text-align: center;
+            height: 10vh;
+            line-height: 2.6;
+
+            @media @tablet {
+                font-size: 2.5vh;
                 color: @lightningblue;
                 display: block;
                 text-align: center;
-                height: 10vh;
-                line-height: 2.6;
-
-                @media @tablet {
-                    font-size: 2.5vh;
-                    color: @lightningblue;
-                    display: block;
-                    text-align: center;
-                    height: 7vh;
-                    line-height: 1.6;
-                    padding-top: 0.5vh;
-                }
+                height: 7vh;
+                line-height: 1.6;
+                padding-top: 1.5vh;
             }
 
-            span::after {
-                content:" " url('../img/GitHub-Mark-32px.png');
-            }
-
-            span:hover {
-                background-color: @lightningblue;
-                color: #ffff;
-                transition: 1s;
+            @media @phone {
+                height: 6vh;
             }
         }
+
+        span::after {
+            content:" " url('../img/GitHub-Mark-32px.png');
+        }
+
+        span:hover {
+            background-color: @lightningblue;
+            color: #ffff;
+            transition: 1s;
+        }
+    }    
     
-        .box:hover { flex: 1 1 55%; }
-            img:hover {
-                width: 100%;
-                height: 100%;
-                opacity: 1;
-            }      
-            
-    }
-
-    .about-title {
-        .flex-layout(column, center, center);
-
-        h1 {
-            color: @lightningpurple;
-            border-bottom: 1px solid @lightningblue;
-        }
-
-    }
-
+    .box:hover { flex: 1 1 50%; }
+        img:hover {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }        
+}

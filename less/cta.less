@@ -5,24 +5,72 @@
         'cta cta cta'
         'cta cta cta';
 
+    @media @phone {
+        width: 100%;
+        padding: 0;
+    }
+
     .cta {
         grid-area: cta;
         min-height: 400px;
-        background: url(../img/cta-image.jpg);
+        background: url(../img/literature-3033196_1280.jpg) no-repeat;
+        background-color: rgba(255,255,255,0.6);
+        background-blend-mode: lighten;
         background-size: cover;
         background-position: center;
-        .flex-layout(column, start, start);
-        padding: 5rem;
+        .flex-layout(column, center, none);
+        padding: 3rem;
         box-shadow: @bxs;
+
+        @media @tablet {
+            .flex-layout(column, center, center);
+            text-align: center;
+        }
+
+        @media @phone {
+            min-height: 300px;
+            padding: 0;
+            width: 100%;
+        }
+
+
+        
+
+        
 
         h1 {
             font-size: 7rem;
+            color: @lightningpurple;
+            font-family: 'Dancing Script', cursive;
+            border-bottom: 1px solid black;
+            width: 33.5rem;
+            padding: 0.5rem;
+
+            @media @phone {
+                font-size: 10vw;
+                width: 55.5vw;
+            }
+            
+        }
+
+        h2 {
+            color: @lightningblue;
+            padding: 0.5rem;
+
+            @media @phone {
+                font-size: 5vw;
+            }
         }
 
         button {
             .button-layout;
         }
 
+        
+
+        button:hover {
+            
+        }
     }
 }
 
