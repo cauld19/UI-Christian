@@ -6,8 +6,11 @@
     
     .main-content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-        grid-gap: 1.5rem;
+        grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 1.5rem; 
+        width: 100%;
+        // grid-auto-rows: minmax(100px, auto);
+        overflow: hidden; 
 
         .wrapper {
             .flex-layout(column, center, center);
@@ -17,6 +20,19 @@
                 height: 100%;
                 display: block;
                 object-fit: cover;
+                overflow: hidden;
+           }
+
+           h3 {
+               @media @phone {
+                   font-size: 5.8vw;
+               }
+           }
+
+           p {
+                @media @phone {
+                    font-size: 3.7vw;
+                }
            }
         }
 
@@ -25,3 +41,4 @@
         }
     }
 }
+

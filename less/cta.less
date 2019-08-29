@@ -33,11 +33,6 @@
             width: 100%;
         }
 
-
-        
-
-        
-
         h1 {
             font-size: 7rem;
             color: @lightningpurple;
@@ -61,112 +56,80 @@
                 font-size: 5vw;
             }
         }
-
-        button {
-            .button-layout;
-        }
-
-        
-
-        button:hover {
-            
-        }
     }
 }
 
+.btn {
+    .button-layout;
+}
+
+.btn:hover {
+    font-size: 1.6rem;
+
+    @media @phone {
+        font-size: 4vw;
+    }
+}
+  
 
 
+.btn::before, .btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .3s;
+    border: 1px dashed lightgrey;
 
+    @media @phone {
+        display: none;
+    }
+  }
+  
+  .btn:hover::after {
+    animation-name: rotate-cw;
+    animation-duration: 4s;
+    border-radius: 10%;
 
+    @media @phone {
+        display: none;
+    }
+  }
+  .btn:hover::before {
+    animation-name: rotate-ccw; 
+    animation-duration: 3s;
+    border-radius: 10%;
 
-// .cta {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     grid-template-rows: 1fr 1fr 1fr;
-//     grid-gap: 1.5rem;
-
-//     img {
-//         width: 100%;
-//         height: 100%;
-//         display: block;
-//         object-fit: cover;
-//     }
-// }
-
-// .cta-wrapper1 {
-//     display: grid;
-//     border: 1px solid red;
-//     grid-column: 1/3;
-// }
-
-// .cta {
-//     .flex-layout(row, space-between, center);
-//     background: @lightningpurple;
+    @media @phone {
+        display: none;
+    }
+  }
+  .btn:hover::after, .btn:hover::before {
+    left: 68px;
+    height: 55px;
+    width: 61px;
     
-//     .main-image {
-//         display:flex;
-//         justify-content: center;
-//         flex-basis: 70%;
-//         padding: 2rem;
-//         padding-right: 0;
-        
-        
     
-//         .notebook-image{
-//             width: 100%;
-//         }
-//     }
-    
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 
-// .cta {
-//     position: relative;
-//     background: url(../img/cta-image.jpg) no-repeat bottom center/cover;
-//     height: 500px;
-
-//     .overlay {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         height: 100%;
-//         width: 100%;
-//         background-color: rgba(0, 0, 0, 0.4);
-
-//         .cta-inner {
-//             color: #fff;
-//              .flex-layout(column, none,none);
-//              margin-top: 3rem;
-//              margin-left: 3rem;
-//              max-width: 800px;
-
-//             h1 {
-//                 border-bottom: 1px solid @lightningpurple;
-//                 font-family: 'Dancing Script', cursive;
-//                 width: 28rem;
-//                 color: @lightningblue;
-
-//             }
-
-//             h2 {
-//                 color: #ffff;
-//             }
-        
-//             .cta-button {
-//                 margin: 0 auto;
-//                 margin-top: 5rem;
-
-//                 button {
-//                     .button-layout;
-//                 }
-                
-        
-//             }
-            // button:hover {
-            //     .button-layout-hover;
-
-//         }
-//     }
-// }
-
+    @media @phone {
+        display: none;
+    }
+  }
+  
+  @keyframes rotate-cw {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  
+  @keyframes rotate-ccw {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(-360deg);}
+  }
     
 
    
