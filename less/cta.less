@@ -72,6 +72,7 @@
 }
   
 
+/* button */
 
 .btn::before, .btn::after {
     content: '';
@@ -87,7 +88,7 @@
     @media @phone {
         display: none;
     }
-  }
+}
   
   .btn:hover::after {
     animation-name: rotate-cw;
@@ -97,7 +98,7 @@
     @media @phone {
         display: none;
     }
-  }
+}
   .btn:hover::before {
     animation-name: rotate-ccw; 
     animation-duration: 3s;
@@ -106,7 +107,7 @@
     @media @phone {
         display: none;
     }
-  }
+}
   .btn:hover::after, .btn:hover::before {
     left: 68px;
     height: 55px;
@@ -119,17 +120,17 @@
     @media @phone {
         display: none;
     }
-  }
+}
   
   @keyframes rotate-cw {
       from {transform: rotate(0deg);}
       to {transform: rotate(360deg);}
-  }
+}
   
   @keyframes rotate-ccw {
       from {transform: rotate(0deg);}
       to {transform: rotate(-360deg);}
-  }
+}
     
 
    
