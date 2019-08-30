@@ -19,7 +19,7 @@
     font-size: 4vw;
     margin: 0 auto;
     border: 1px dashed lightgrey;
-    line-height: 3.2rem;
+    line-height: 2.2rem;
   }
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -314,7 +314,7 @@ header nav h2 {
     font-size: 4vw;
     margin: 0 auto;
     border: 1px dashed lightgrey;
-    line-height: 3.2rem;
+    line-height: 2.2rem;
   }
 }
 .btn:hover {
