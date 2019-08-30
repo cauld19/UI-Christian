@@ -10,6 +10,7 @@
   margin-top: 1rem;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
 }
 @media (max-width: 500px) {
   .button-layout {
@@ -238,7 +239,7 @@ header nav h2 {
 .top-container .cta {
   grid-area: cta;
   min-height: 400px;
-  background: url(../img/literature-3033196_1280.jpg) no-repeat;
+  background: url(../img/literature.jpg) no-repeat;
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: lighten;
   background-size: cover;
@@ -289,6 +290,9 @@ header nav h2 {
     font-size: 5vw;
   }
 }
+.top-container .cta a {
+  text-decoration: none;
+}
 .btn {
   font-size: 2.5rem;
   position: relative;
@@ -301,6 +305,7 @@ header nav h2 {
   margin-top: 1rem;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
 }
 @media (max-width: 500px) {
   .btn {
