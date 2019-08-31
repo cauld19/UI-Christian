@@ -532,7 +532,7 @@ header nav h2 {
   display: block;
   text-align: center;
   height: 10vh;
-  line-height: 2.6;
+  line-height: 7.6rem;
 }
 @media (max-width: 800px) {
   .about-team .box span {
@@ -542,7 +542,7 @@ header nav h2 {
     text-align: center;
     height: 7vh;
     line-height: 1.6;
-    padding-top: 1.5vh;
+    padding-top: 0.5vh;
   }
 }
 @media (max-width: 500px) {
